@@ -1,0 +1,81 @@
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/watch-html charset=UTF-8" />
+    <title>Report and Test Google Analytics</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet"> 
+    <script>
+        (function(i, s, o, g, r, a, m) {
+            i['GoogleAnalyticsObject'] = r;
+            i[r] = i[r] || function() {
+                (i[r].q = i[r].q || []).push(arguments)
+            }, i[r].l = 1 * new Date();
+            a = s.createElement(o),
+                m = s.getElementsByTagName(o)[0];
+            a.async = 1;
+            a.src = g;
+            m.parentNode.insertBefore(a, m)
+        })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
+
+        ga('create', 'UA-84156160-2', 'auto');
+        ga('send', 'pageview');
+    </script>
+</head>
+<body>
+    <h1>Pagina di Test</h1>
+    <p>from https to http</p>
+    <h3>osservare come reagisce Google Analytics</h3>
+    <h4>'IN TEMPO REALE -> Sorgenti di traffico'</h4>
+    <h4>'ACQUISIZIONE -> Tutto il traffico -> Sorgente/Mezzo'</h4>
+    <table>
+        <tr>
+            <td>Time Click</td>
+            <td>#</td>
+            <td>Time Leave</td>
+            <td>Comments</td>
+        </tr>
+        <tr>
+            <td colspan="4" class="days">Mercoledi 6 settembre 2017</td>
+        </tr>
+        <tr>
+            <td>10.58</td>
+            <td>1</td>
+            <td>11.04</td>
+            <td>primo click. acquisizione del dato da parte di GA quasi istantanea, pagina immediatamente chiusa e perdita del dato dopo circa 6 minuti. pagina web chiusa.</td>
+        </tr>
+        <tr>
+            <td>11.04</td>
+            <td>2</td>
+            <td>/</td>
+            <td rowspan="2">nuova sessione. click e chiusura della pagina seguito da un altro click ma mantenendo la pagina aperto. GA registra un solo utente ma con due visualizzazione di pagina ravvicinate. perdita del dato dopo circa 6 minuti. pagina web mantenuta.</td>
+        </tr>
+        <tr>
+            <td>11.05</td>
+            <td>3</td>
+            <td>11.11</td>
+        </tr>
+        <tr>
+            <td>11.15</td>
+            <td>4</td>
+            <td>/</td>
+            <td rowspan="2">vecchia sessione. doppio click sul banner. GA registra un solo utente ma con due visualizzazione di pagina sovrapposte. perdita del dato dopo circa 6 minuti.</td>
+        </tr>
+        <tr>
+            <td>11.15</td>
+            <td>5</td>
+            <td>11.21</td>
+        </tr>
+        <tr>
+            <td>11.30</td>
+            <td>6</td>
+            <td>11.36</td>
+            <td>google chrome. nuova sessione. click sul banner e pagina immediatamente chiusa. GA solito comportamento, dato immediatamente registrato e perso dopo circa 6 minuti. </td>
+        </tr>
+        <tr>
+            <td colspan="4" class="days">Mercoledi 6 settembre 2017</td>
+        </tr>
+    </table>
+</body>
+
+</html>
